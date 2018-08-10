@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <AppProvider>
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
           <React.Fragment>
             <Header branding="Hacker News" />
             <Switch>
