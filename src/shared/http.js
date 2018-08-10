@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-export let ENDPOINT = 'https://hacker-news-api.herokuapp.com';
+export let ENDPOINT =
+  process.env.API_URL || 'https://hacker-news-api.herokuapp.com';
 // if (process.env.NODE_ENV === 'development') {
 //   ENDPOINT = 'http://localhost:1338';
 // }
