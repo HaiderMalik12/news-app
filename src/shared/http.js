@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const ENDPOINT = 'http://localhost:1338';
+export const ENDPOINT = process.env.API_URL || 'http://localhost:1338';
 
 export function fetchLinks() {
   return axios.get(`${ENDPOINT}/links`);
