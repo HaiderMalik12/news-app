@@ -1,13 +1,13 @@
 import axios from 'axios';
 
-export let ENDPOINT = '';
-if (process.env.NODE_ENV === 'development') {
-  ENDPOINT = 'http://localhost:1338';
-}
+export let ENDPOINT = 'https://hacker-news-api.herokuapp.com';
+// if (process.env.NODE_ENV === 'development') {
+//   ENDPOINT = 'http://localhost:1338';
+// }
 
-if (process.env.NODE_ENV === 'production') {
-  ENDPOINT = 'https://hacker-news-api.herokuapp.com';
-}
+// if (process.env.NODE_ENV === 'production') {
+//   ENDPOINT = 'https://hacker-news-api.herokuapp.com';
+// }
 
 export function fetchLinks() {
   return axios.get(`${ENDPOINT}/links`);
